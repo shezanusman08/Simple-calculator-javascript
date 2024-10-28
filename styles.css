@@ -1,0 +1,102 @@
+/* Reset and Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Calculator Container */
+.calculator {
+    width: 340px;
+    background-color: #f1f5f9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Display Section */
+.display {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.display input {
+    width: 100%;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: right;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+/* Button Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Button Styles */
+.btn {
+    font-size: 1.5em;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    color: #1e293b;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+/* Color Variants */
+.btn.operator {
+    background-color: #93c5fd;
+    color: #1e3a8a;
+}
+
+.btn.clear {
+    background-color: #fecaca;
+    color: #b91c1c;
+}
+
+.btn.number, .btn.operator, .btn.clear {
+    background-color: #e2e8f0;
+}
+
+.btn.number {
+    background-color: #f1f5f9;
+}
+
+/* Hover and Active Effects */
+.btn:hover {
+    background-color: #e5e7eb;
+}
+
+.btn.operator:hover {
+    background-color: #bfdbfe;
+}
+
+.btn.clear:hover {
+    background-color: #fca5a5;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
